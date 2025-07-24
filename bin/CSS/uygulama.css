@@ -1,0 +1,205 @@
+#arkaplan
+{
+-fx-background-image:url("file:///C:/Users/h_ank/eclipse-workspace_JavaFX/vetuygulama/src/png/cat.png");
+-fx-background-size:cover;
+
+
+}
+
+
+
+
+
+.backgroundColor
+ {
+ -fx-background-color:linear-gradient(to right bottom,#FFE5C1,#5C9B54);
+
+}
+
+.golge {
+-fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.8), 8,0,0,0);
+}
+
+.beyaz{
+-fx-background-color:#fff;
+-fx-background-radius:10px;
+}
+
+.kivrm{
+-fx-background-radius:10px;
+}
+
+#home {
+  -fx-background-color: transparent;
+  -fx-cursor: hand; 
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 14;
+    -fx-text-fill: #a6a6a6;
+   
+   }
+   
+#kkayit {
+  -fx-background-color: transparent;
+  -fx-cursor: hand; 
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 14;
+    -fx-text-fill: #a6a6a6;
+   
+   }
+   
+   #hizmet {
+  -fx-background-color: transparent;
+  -fx-cursor: hand; 
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 14;
+    -fx-text-fill: #a6a6a6;
+   
+   }
+  
+   .jfx-textfield {
+  
+  -fx-focus-color: #00004d;
+  
+}
+
+.jfx-textfield {
+    -fx-focus-color: #00009d;
+  
+}
+
+.jfx-textfield .jfx-text-field-label {
+  -fx-text-fill: #00004d;
+}
+
+.jfx-textfield .jfx-text-field {
+  -fx-text-fill: #00004d;
+  -fx-prompt-text-fill: #808080;
+}
+
+.jfx-textfield .jfx-text-field:focused {
+  -fx-text-fill: #00004d;
+}
+
+.jfx-textfield .jfx-text-field:hover {
+  -fx-text-fill: #00004d;
+}
+
+
+.labelarkaplan {
+  -fx-border-radius: 15px;
+  -fx-padding: 5px;
+ -fx-background-color: #00004d;
+}
+
+.silbuton {
+  -fx-cursor: hand;
+  -fx-background-color: #FF0000; 
+}
+
+.search{
+-fx-background-color:transparent;
+-fx-border-color: linear-gradient(to right bottom,#FFE5C1,#5C9B54);
+-fx-border-width:3px;
+-fx-border-radius:5px;
+-fx-font-size:13px;
+-fx-font-family: "ARİAL BLACK";
+-fx-padding:0px 0px 0px 28px;
+}
+.search:focused{
+-fx-border-width:5px;
+}
+
+ .table-view,
+.table-view .column-header,
+.table-view .column-header-background .filler,
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  transparent ;
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+     -fx-alignment:CENTER;
+     -fx-font-family: "Arial Black";
+    -fx-font-size: 16px;
+}
+.table-view .table-cell{
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+ -fx-alignment:CENTER;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: red;
+    -fx-text-background-color: red;
+ -fx-alignment:CENTER;
+ -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+ -fx-alignment:CENTER;
+ -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+     -fx-alignment:CENTER;
+     -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+    }
+
+
+.table-row-cell:highlighted {
+    -fx-background-color: #93f9b821;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+ -fx-alignment:CENTER;
+ -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:black;
+    -fx-text-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+ -fx-alignment:CENTER;
+ -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+}
+
+/*
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}  
+*/

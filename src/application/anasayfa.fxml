@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anasayfa" prefHeight="785.0" prefWidth="1300.0"
+	styleClass="backgroundColor" stylesheets="@../CSS/uygulama.css"
+	xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.anasayfaController">
+	<children>
+		<AnchorPane prefHeight="100.0" prefWidth="900.0"
+			stylesheets="@application.css">
+			<children>
+				<AnchorPane fx:id="bord" layoutX="-1.0" layoutY="-8.0"
+					prefHeight="104.0" prefWidth="1303.0"
+					style="-fx-background-color: #00004b;"
+					stylesheets="@../CSS/uygulama.css">
+					<children>
+						<Button fx:id="home" layoutX="382.0" layoutY="8.9"
+							mnemonicParsing="false" onAction="#switchForm"
+							prefHeight="104.0" prefWidth="169.0"
+							styleClass="golge" text="ANASAYFA"
+							textFill="#a6a6a6">
+							<font>
+								<Font name="Arial Black" size="13.0" />
+							</font>
+							<graphic>
+								<FontAwesomeIcon fill="#a6a6a6" glyphName="HOME"
+									size="3em" text="" />
+							</graphic>
+						</Button>
+						<Button id="kkayit" fx:id="kk_btn" layoutX="567.0"
+							layoutY="8.9" mnemonicParsing="false"
+							onAction="#switchForm" prefHeight="104.0"
+							prefWidth="169.0" styleClass="golge"
+							text="KLİNİK KAYIT" textFill="#a6a6a6">
+							<graphic>
+								<FontAwesomeIcon fill="#a6a6a6"
+									glyphName="PLUS_CIRCLE" size="3em" />
+							</graphic>
+							<font>
+								<Font name="Arial Black" size="13.0" />
+							</font>
+						</Button>
+						<Button fx:id="hizmet" layoutX="955.0" layoutY="8.9"
+							mnemonicParsing="false" onAction="#switchForm"
+							prefHeight="104.0" prefWidth="170.0"
+							styleClass="golge" text="İŞLEM TAKİP">
+							<graphic>
+								<FontAwesomeIcon fill="#a6a6a6"
+									glyphName="CLIPBOARD" size="2.5em" />
+							</graphic>
+						</Button>
+						<Button id="kkayit" fx:id="islemkayıt_btn"
+							layoutX="770.0" layoutY="8.9"
+							mnemonicParsing="false" onAction="#switchForm"
+							prefHeight="104.0" prefWidth="170.0"
+							styleClass="golge" text="İŞLEM KAYIT"
+							textFill="#a6a6a6">
+							<graphic>
+								<FontAwesomeIcon fill="#a6a6a6"
+									glyphName="PLUS_SQUARE" size="3em" />
+							</graphic>
+							<font>
+								<Font name="Arial Black" size="13.0" />
+							</font>
+						</Button>
+					</children>
+					<styleClass>
+						<String fx:value="kivrm" />
+						<String fx:value="golge" />
+					</styleClass>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+		<AnchorPane layoutX="326.0" layoutY="102.4" prefHeight="648.0"
+			prefWidth="900.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="102.0">
+			<children>
+				<AnchorPane fx:id="home_form" layoutX="335.0" prefHeight="685.0"
+					prefWidth="1302.0" visible="false"
+					AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<AnchorPane layoutX="8.0" layoutY="14.0"
+							prefHeight="200.0" prefWidth="1283.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<AnchorPane layoutX="904.0" layoutY="20.0"
+									prefHeight="165.0" prefWidth="286.0"
+									style="-fx-background-color: #00004b;"
+									styleClass="kivrm">
+									<children>
+										<FontAwesomeIcon fill="#a6a6a6"
+											glyphName="USER" layoutX="19.0"
+											layoutY="85.0"
+											selectionFill="#a6a6a6" size="3em"
+											wrappingWidth="36.6285514831543" />
+										<Label alignment="CENTER" layoutX="2.0"
+											layoutY="117.0" prefHeight="23.0"
+											prefWidth="266.0"
+											text="------PERSONEL------"
+											textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="15.0" />
+											</font>
+										</Label>
+										<Label fx:id="ana_personel"
+											alignment="CENTER" layoutX="51.0"
+											layoutY="30.0" prefHeight="83.0"
+											prefWidth="170.0" styleClass="golge"
+											text="0" textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="28.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+								<AnchorPane layoutX="531.0" layoutY="20.0"
+									prefHeight="165.0" prefWidth="274.0"
+									style="-fx-background-color: #00004b;"
+									styleClass="kivrm">
+									<children>
+										<FontAwesomeIcon fill="#a6a6a6"
+											glyphName="TURKISH_LIRA"
+											layoutX="20.0" layoutY="88.0"
+											selectionFill="#a6a6a6" size="3em"
+											wrappingWidth="36.6285514831543" />
+										<Label alignment="CENTER" layoutX="3.0"
+											layoutY="120.0" prefHeight="23.0"
+											prefWidth="266.0"
+											text="------KAZANÇ------"
+											textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="15.0" />
+											</font>
+										</Label>
+										<Label fx:id="ana_kaznc"
+											alignment="CENTER" layoutX="52.0"
+											layoutY="33.0" prefHeight="83.0"
+											prefWidth="170.0" text="0.0"
+											textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="28.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+								<AnchorPane layoutX="129.0" layoutY="21.0"
+									prefHeight="165.0" prefWidth="274.0"
+									style="-fx-background-color: #00004b;">
+									<styleClass>
+										<String fx:value="backgroundColor" />
+										<String fx:value="kivrm" />
+									</styleClass>
+									<children>
+										<FontAwesomeIcon fill="#a6a6a6"
+											glyphName="PAW" layoutX="14.0"
+											layoutY="87.0" size="3em"
+											wrappingWidth="36.6285514831543" />
+										<Label alignment="CENTER" layoutX="5.0"
+											layoutY="119.0" prefHeight="23.0"
+											prefWidth="266.0"
+											text="------KAYIT SAYISI------"
+											textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="15.0" />
+											</font>
+										</Label>
+										<Label fx:id="ana_kayıts"
+											alignment="CENTER" layoutX="59.0"
+											layoutY="32.0" prefHeight="83.0"
+											prefWidth="170.0" text="0"
+											textFill="#a6a6a6">
+											<font>
+												<Font name="Arial Black"
+													size="28.0" />
+											</font>
+										</Label>
+									</children>
+								</AnchorPane>
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="69.0" layoutY="245.0"
+							prefHeight="408.0" prefWidth="1155.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<AreaChart fx:id="ana_grafik" layoutX="50.0"
+									layoutY="17.0" prefHeight="377.0"
+									prefWidth="1063.0" title="KAZANÇ GRAFİĞİ">
+									<xAxis>
+										<CategoryAxis side="BOTTOM" />
+									</xAxis>
+									<yAxis>
+										<NumberAxis side="LEFT" />
+									</yAxis>
+								</AreaChart>
+							</children>
+						</AnchorPane>
+					</children>
+				</AnchorPane>
+				<AnchorPane fx:id="kk_form" layoutY="1.0" prefHeight="647.6"
+					prefWidth="900.0" visible="false"
+					AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+					<children>
+						<AnchorPane layoutX="32.0" layoutY="15.0"
+							prefHeight="655.0" prefWidth="266.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<Label alignment="CENTER" layoutX="8.0"
+									layoutY="14.0" prefHeight="30.0"
+									prefWidth="250.0" styleClass="labelarkaplan"
+									text="EVCİL HAYVAN SAHİP BİLGİLERİ"
+									textFill="#fff8f8">
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+								</Label>
+								<JFXTextField fx:id="kk_adsoyad" layoutX="19.0"
+									layoutY="64.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="AD SOYAD :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="kk_no" layoutX="19.0"
+									layoutY="117.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="TEL NO :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<Label alignment="CENTER" layoutX="8.0"
+									layoutY="175.0" prefHeight="26.0"
+									prefWidth="250.0" styleClass="labelarkaplan"
+									stylesheets="@../CSS/uygulama.css"
+									text="EVCİL HAYVAN BİLGİLERİ"
+									textFill="WHITE">
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+								</Label>
+								<JFXTextField fx:id="kk_id" layoutX="22.0"
+									layoutY="219.0" prefHeight="26.0"
+									prefWidth="215.0"
+									promptText="EVCİL HAYVAN İD :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="kk_isim" layoutX="22.0"
+									layoutY="272.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="İSİM :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="kk_tür" layoutX="19.0"
+									layoutY="317.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="TÜR :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="kk_cins" layoutX="19.0"
+									layoutY="370.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="CİSN :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="kk_tarih" layoutX="19.0"
+									layoutY="424.0" prefHeight="26.0"
+									prefWidth="215.0"
+									promptText="DOĞUM TARİHİ :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXComboBox fx:id="kk_cinsiyet" layoutX="19.0"
+									layoutY="472.0" onAction="#ekcinsiyetlist"
+									prefHeight="26.0" prefWidth="215.0"
+									promptText="CİNSİYET" styleClass="combo-box"
+									stylesheets="@../CSS/uygulama.css"
+									viewOrder="2.0">
+									<cursor>
+										<Cursor fx:constant="HAND" />
+									</cursor>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+								</JFXComboBox>
+								<JFXButton fx:id="kk_temizle" layoutX="79.0"
+									layoutY="511.0" onAction="#kkayıttemiz"
+									prefHeight="36.0" prefWidth="87.0"
+									text="TEMİZLE" textFill="#4772df">
+									<font>
+										<Font name="Arial Bold" size="14.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="kk_düzenle" layoutX="169.0"
+									layoutY="514.0" onAction="#kkayıtdüzenle"
+									prefHeight="30.0" prefWidth="87.0"
+									text="DÜZENLE" textFill="#e4ab38">
+									<font>
+										<Font name="Arial Bold" size="14.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="kk_sil" layoutX="4.0"
+									layoutY="564.0" onAction="#kayısil"
+									prefHeight="36.0" prefWidth="250.0"
+									styleClass="silbuton"
+									stylesheets="@../CSS/uygulama.css"
+									text="SİL">
+									<font>
+										<Font name="Arial Black" size="15.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="kk_ekle" layoutX="11.0"
+									layoutY="511.0" onAction="#kkayıtekle"
+									prefHeight="36.0" prefWidth="66.0"
+									text="EKLE" textFill="#22dc28">
+									<font>
+										<Font name="Arial Bold" size="15.0" />
+									</font>
+								</JFXButton>
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="327.0" layoutY="16.0"
+							prefHeight="655.0" prefWidth="949.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="backgroundColor" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<TextField fx:id="kk_ara" layoutX="292.0"
+									layoutY="17.0" onKeyTyped="#kkayıtSearch"
+									prefHeight="36.0" prefWidth="446.0"
+									promptText="KAYIT ARA" styleClass="search"
+									stylesheets="@../CSS/uygulama.css" />
+								<FontAwesomeIcon fill="#058105"
+									glyphName="SEARCH" layoutX="298.0"
+									layoutY="42.0" size="2em" />
+								<TableView fx:id="kk_tablewiev" layoutX="54.0"
+									layoutY="83.0" onMouseClicked="#kayıtsec"
+									prefHeight="526.0" prefWidth="866.0"
+									stylesheets="@../CSS/uygulama.css">
+									<columns>
+										<TableColumn fx:id="kk_t_id"
+											prefWidth="41.5999755859375"
+											text="İD" />
+										<TableColumn fx:id="kk_t_adsoyad"
+											prefWidth="135.7332763671875"
+											text="Ad Soyad" />
+										<TableColumn fx:id="kk_t_no"
+											prefWidth="143.4666748046875"
+											text="Tel No" />
+										<TableColumn fx:id="kk_t_isim"
+											prefWidth="93.3333740234375"
+											text="İsim" />
+										<TableColumn fx:id="kk_t_tür"
+											prefWidth="101.066650390625"
+											styleClass="dsa" text="Tür" />
+										<TableColumn fx:id="kk_t_cins"
+											prefWidth="92.8001708984375"
+											text="Cins" />
+										<TableColumn fx:id="kk_t_cinsiyet"
+											prefWidth="99.7333984375"
+											text="Cinsiyet" />
+										<TableColumn fx:id="kk_t_dt"
+											prefWidth="148.800048828125"
+											text="Doğum Tarihi" />
+									</columns>
+								</TableView>
+							</children>
+						</AnchorPane>
+					</children>
+				</AnchorPane>
+				<AnchorPane fx:id="islem_form" layoutX="239.0" layoutY="129.0"
+					prefHeight="682.6" prefWidth="1301.6" visible="false"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<AnchorPane layoutX="326.0" layoutY="12.0"
+							prefHeight="655.0" prefWidth="949.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="backgroundColor" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<TextField fx:id="islem_ara" layoutX="292.0"
+									layoutY="17.0" prefHeight="36.0"
+									prefWidth="446.0" promptText="İŞLEM ARA"
+									styleClass="search"
+									stylesheets="@../CSS/uygulama.css" />
+								<FontAwesomeIcon fill="#058105"
+									glyphName="SEARCH" layoutX="298.0"
+									layoutY="42.0" size="2em" />
+								<TableView fx:id="islem_tablewiev"
+									layoutX="102.0" layoutY="94.0"
+									onMouseClicked="#ikayıtsec"
+									prefHeight="526.0" prefWidth="745.0"
+									stylesheets="@../CSS/uygulama.css">
+									<columns>
+										<TableColumn fx:id="islem_col_id"
+											prefWidth="130.93331909179688"
+											text="İŞLEM İD " />
+										<TableColumn fx:id="islem_col_adı"
+											prefWidth="208.26666259765625"
+											text="İŞLEM İSMİ" />
+										<TableColumn fx:id="islem_col_adet"
+											prefWidth="138.39996337890625"
+											text="ADET" />
+										<TableColumn fx:id="islem_col_skt"
+											prefWidth="154.93328857421875"
+											text="SKT" />
+										<TableColumn fx:id="islem_col_fiat"
+											prefWidth="111.19997558593752"
+											text="FİYAT" />
+									</columns>
+								</TableView>
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="24.0" layoutY="11.0"
+							prefHeight="655.0" prefWidth="266.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<Label alignment="CENTER" layoutX="8.0"
+									layoutY="14.0" prefHeight="30.0"
+									prefWidth="250.0" styleClass="labelarkaplan"
+									text="İŞLEM KAYIT" textFill="#fff8f8">
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+								</Label>
+								<JFXTextField fx:id="islem_id" layoutX="19.0"
+									layoutY="64.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="İŞLEM İD :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="islem_adet" layoutX="19.0"
+									layoutY="117.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="ADET :  "
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="islem_adı" layoutX="22.0"
+									layoutY="171.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="İŞLEM İSMİ :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="islem_fiat" layoutX="21.0"
+									layoutY="278.0" prefHeight="26.0"
+									prefWidth="215.0" promptText="FİYAT :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXTextField fx:id="islem_skt" layoutX="19.0"
+									layoutY="232.0" prefHeight="26.0"
+									prefWidth="215.0"
+									promptText="SON KULLANMA TARİHİ :"
+									stylesheets="@../CSS/uygulama.css"
+									unFocusColor="BLACK">
+									<styleClass>
+										<String fx:value="jfx-text-field" />
+										<String fx:value="jfx-text-field-label" />
+										<String fx:value="jfx-textfield" />
+									</styleClass>
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+									<effect>
+										<Blend mode="HARD_LIGHT" />
+									</effect>
+								</JFXTextField>
+								<JFXButton fx:id="islem_temizle" layoutX="79.0"
+									layoutY="511.0" onAction="#ikayıttemiz"
+									prefHeight="36.0" prefWidth="87.0"
+									text="TEMİZLE" textFill="#4772df">
+									<font>
+										<Font name="Arial Bold" size="14.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="islem_dznle" layoutX="169.0"
+									layoutY="514.0" onAction="#ikayıtdüzenle"
+									prefHeight="30.0" prefWidth="87.0"
+									text="DÜZENLE" textFill="#e4ab38">
+									<font>
+										<Font name="Arial Bold" size="14.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="islem_si" layoutX="4.0"
+									layoutY="564.0" onAction="#ikayısil"
+									prefHeight="36.0" prefWidth="250.0"
+									styleClass="silbuton"
+									stylesheets="@../CSS/uygulama.css"
+									text="SİL">
+									<font>
+										<Font name="Arial Black" size="15.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="islem_ekle" layoutX="11.0"
+									layoutY="511.0" onAction="#ikayıtekle"
+									prefHeight="36.0" prefWidth="66.0"
+									text="EKLE" textFill="#22dc28">
+									<font>
+										<Font name="Arial Bold" size="15.0" />
+									</font>
+								</JFXButton>
+							</children>
+						</AnchorPane>
+					</children>
+				</AnchorPane>
+				<AnchorPane fx:id="fatura_form" layoutX="40.0" layoutY="28.0"
+					prefHeight="682.6" prefWidth="1301.6"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<children>
+						<AnchorPane layoutX="31.0" layoutY="14.0"
+							prefHeight="635.0" prefWidth="782.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="backgroundColor" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<TableView fx:id="fatura_tablewiev"
+									layoutX="93.0" layoutY="36.0"
+									prefHeight="539.0" prefWidth="624.0"
+									stylesheets="@../CSS/uygulama.css">
+									<columns>
+										<TableColumn fx:id="fatura_islemid"
+											prefWidth="109.60003662109375"
+											text="İŞLEM İD " />
+										<TableColumn fx:id="fatura_islemismi"
+											prefWidth="176.0" text="İŞLEM İSMİ" />
+										<TableColumn fx:id="fatura_e_hİ"
+											prefWidth="194.4000244140625"
+											text="EVCİL HAYVAN İSMİ" />
+										<TableColumn fx:id="fatura_fiyat"
+											prefWidth="144.0" text="FİYAT" />
+									</columns>
+								</TableView>
+							</children>
+						</AnchorPane>
+						<AnchorPane layoutX="824.0" layoutY="11.0"
+							prefHeight="635.0" prefWidth="446.0">
+							<styleClass>
+								<String fx:value="beyaz" />
+								<String fx:value="golge" />
+							</styleClass>
+							<children>
+								<Label alignment="CENTER" layoutX="8.0"
+									layoutY="14.0" prefHeight="30.0"
+									prefWidth="431.0" styleClass="labelarkaplan"
+									text="FATURALANDIRMA" textFill="#fff8f8">
+									<font>
+										<Font name="Arial Black" size="12.0" />
+									</font>
+								</Label>
+								<JFXButton fx:id="fatura_eklebuton"
+									layoutX="168.0" layoutY="368.0"
+									prefHeight="30.0" prefWidth="110.0"
+									text="EKLE" textFill="#2f9e04">
+									<font>
+										<Font name="Arial Bold" size="14.0" />
+									</font>
+								</JFXButton>
+								<JFXButton fx:id="fatura_buton" layoutX="111.0"
+									layoutY="416.0" prefHeight="36.0"
+									prefWidth="250.0"
+									style="-fx-background-color: ORANGE;"
+									stylesheets="@../CSS/uygulama.css"
+									text="FATURA YAZDIR">
+									<font>
+										<Font name="Arial Black" size="15.0" />
+									</font>
+								</JFXButton>
+								<JFXTextField fx:id="fatura_id" layoutX="93.0"
+									layoutY="92.0" prefHeight="26.0"
+									prefWidth="250.0" text="İŞLEM İD GİRİNİZ:" />
+								<JFXTextField fx:id="fatura_h_isim"
+									layoutX="94.0" layoutY="144.0"
+									prefHeight="26.0" prefWidth="250.0"
+									text="İŞLEM İSMİ GİRİNİZ" />
+								<JFXTextField fx:id="faturae_isim"
+									layoutX="95.0" layoutY="196.0"
+									prefHeight="26.0" prefWidth="250.0"
+									text="EVCİL HAYVAN İSMİ GİRİNİZ" />
+								<JFXTextField fx:id="fatura_tutar"
+									layoutX="98.0" layoutY="249.0"
+									prefHeight="26.0" prefWidth="250.0"
+									text="ÖDENECEK TUTARI GİRİNİZ" />
+							</children>
+						</AnchorPane>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
