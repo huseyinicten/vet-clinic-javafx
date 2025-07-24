@@ -23,8 +23,8 @@ A desktop application developed using JavaFX for managing a veterinary clinic. I
 To run this JavaFX-based veterinary clinic application on your local machine, follow the steps below:
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/veterinary-clinic-app.git
+   ```bash[
+   git clone https://github.com/huseyinicten/vet-clinic-javafx.git
    
 2.** Open the project
 
